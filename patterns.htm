@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Crossly Creative-Patterns</title>
+<meta name="description" content="A discussion about where to go to get free patterns, or how to make them yourself">
+<link rel="stylesheet" href="style.css"/>
+<script src="js/modernizr.custom.05819.js"></script>
+</head>
+<body>
+<header>
+<h1>Crossly Creative</h1>
+</header>
+<nav>
+<a href="index.htm">Home</a>
+<a href="materials.htm">Materials</a>
+<a href="stitches.htm">Stitches</a>
+<a href="patterns.htm">Patterns</a>
+</nav>
+<div class = "main">
+<h2>The Patterns</h2>
+<p>There are quite a few websites out there with free patterns on them. I chose a few to highlight that I find myself using regularly.</p>
+<h3>Pinterest</h3>
+<p><a href='https://www.pinterest.com'>Pinterest</a> is a great source for cross-stitch patterns, some of which are free. They have a wide variety of patterns, 
+ranging from vintage imagery to modern television and movie characters. Many patterns are uploaded directly to the site so you don&#39;t even need to 
+download anything. You can just take a screenshot and save the pattern or save the pattern to one of your boards and come back to it. I&#39;ve also found 
+many helpful stitch tutorials on Pinterest if you are interested in learning some fancy embroidery stitches to include in your work. You will need to create 
+an account, which is completely free, in order to view these patterns and stitch tutorials.</p>
+<h3>DMC</h3>
+<p>DMC, a well-known craft supply company, also puts out many free patterns at 
+<a href ='https://www.dmc.com/us/free-patterns-5041/free-patterns-5042/free-cross-stitch-patterns-5044.html'>dmc.com</a> . They have less of a variety than 
+Pinterest, but they still have quite a few patterns that look very nice. The patterns cannot be snipped or saved like Pinterest allows you to do. They will 
+show you an image of what the final product should look like, but not the actual pattern until you download it. You also need to give DMC your e-mail 
+address before they will let you download these patterns, but they are a highly respected company with a good reputation and I have not had any problem 
+using the site.</p>
+<h3>Country Living</h3>
+<p>The magazine <i>Country Living</i> offers some free cross-stitch patterns at its website 
+<a href='https://www.countryliving.com/diy-crafts/a6380/cross-stitch/'>countryliving.com</a>. Like DMC, there is less variety with their patterns than a 
+site like Pinterest has, but they are still nice patterns. These patterns have been in past issues of their magazine dating from 2015 to the current 
+issue. Also like DMC, there is no snipping or saving these patterns. They will, however, show you an image of what the project should look like when 
+finished. These patterns require you to download them, but <i>Country Living</i> is an esteemed publication, and I have not had any problems using 
+the site.</p>
+<h3>Make It Yourself</h3>
+<p>As an alternative, you can create your own patterns. Sometimes the best way to do something creative is to just let yourself go. All you need is graph 
+paper and good drawing skills. If your drawing skills need some work, you can find a picture you like and trace it onto the graph paper. If you create an 
+original pattern that you really like, you can even consider putting it on Pinterest yourself or selling your pattern for a few extra dollars on Etsy.</p>
+<h3>Books</h3>
+<p>Although books usually aren't free, sometimes you can buy them secondhand and not pay a lot.</p>
+
+<h3>Fabric Measurer</h3>
+<p>Wondering how large your next project will be in inches? Please use the fabric measurer below to find out</p> 
+</div>
+<form id = "fabricMeasurer">
+		<fieldset>
+		<legend>Fabric Measurer</legend>
+		<label for="fabric">
+			What Count Is Your Fabric?
+		</label><br>
+		<input type="number" id="fabric" min='1'/><br>
+        <label for="width">
+            How Many Stitches Wide Is Your Design?
+        </label><br>
+        <input type="number" id="width" min='1'/><br>
+		<label for="height">
+			How Many Stitches High Is Your Design?
+		</label><br>
+		<input type="number" id="height" min='1'/><br>
+		</fieldset>
+        <button type="button" id="fabricButton">Do the Math!</button>
+        <p>Width of Design in Inches:</p>
+        <p id="inWidth">&nbsp;</p>
+		<p>Height of Design in Inches:</p>
+		<p id="inHeight">&nbsp;</p>
+</form>
+<script>
+	function designSize() {
+		var fabCount = document.getElementById("fabric").value;
+		var numWide = document.getElementById("width").value;
+		var numHigh = document.getElementById("height").value;
+		var inWide = numWide / fabCount;
+		var inHigh = numHigh / fabCount;
+		document.getElementById("inWidth").innerHTML = inWide;
+		document.getElementById("inHeight").innerHTML = inHigh;
+	}
+	var submitButton = document.getElementById("fabricButton");
+	if (submitButton.addEventListener) {
+		submitButton.addEventListener("click", designSize, false); }
+	else if (submitButton.attachEvent) {
+		submitButton.attachEvent("onclick", submitForm); }
+</script>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+</footer>
+</body>
+</html>

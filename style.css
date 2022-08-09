@@ -1,0 +1,103 @@
+/* this section styles the body of the web page */
+body { background-color: #9050C7; }
+
+/* this section styles the text within the p elements on the page */
+p {
+	font-size: 20px;
+}
+
+/* this section styles the header */
+header { background-color: #4647C7;
+		 border: 3px solid #5EC73C;
+		 color: #5EC73C; }
+		 
+/* this section styles all h1 headings on the web page */
+h1 { text-align: center; 
+	 font-size: 90px; }
+	 
+/* this section styles all h2 headings on the web page */
+h2 {text-align: center;
+	font-size: 60px; }
+	
+/* this section styles all h3 headings on the web page */
+h3 {font-size: 40px; }
+
+/* this section styles the navigation bar */
+nav {font-size: 25px; 
+	 background-color: #C75AB7; 
+	 text-align: center; }
+
+/* this section styles the links on the navigation bar */
+nav a { text-decoration: none; 
+		color: #C7B463;  
+		padding-top: 10px; 
+		padding-bottom: 10px;
+		padding-right: 25px;
+		padding-left: 25px; 
+		font-weight: bold; }
+		
+/* this section styles the links on the navigation bar */
+nav a:visited { color: #5EC73C; }
+
+/* this section styles all forms on the web page */		
+form {font-size: 20px;
+				 width: 30%; 
+				 margin: auto; 
+				 background-color: #5EC73C; 
+				 padding: 30px; 
+				 border-radius: 20px; 
+				 margin-top: 30px; 
+				 font-weight: bold; 
+				 text-align: center; }
+				 
+/* this section styles the legend on all forms on the web page */	
+form legend { font-size: 40px; }
+
+/* this section styles the fieldset on all forms on the web page */	
+form fieldset { border: 2px solid black; }
+
+/* this section styles all buttons with the id of button */	
+#button {padding: 15px; 
+		 font-size: 30px; 
+		 background-color: #4647C7; 
+		 color: #C7B463;
+		 border: 3px solid black;	
+		 margin: auto; 
+		 margin-top: 5px; }
+
+/* this section styles everything in the main class on the web page */	
+.main { font-size: 20px;
+		background-color: #C7B463; 
+		border-radius: 25px; 
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 10px;
+		padding-top: 0;
+		width: 70%; 
+		margin: auto; 
+		text-align: justify; }
+
+/* this section styles all links in the main class on the web page */	
+.main a { text-decoration: none;
+		  color: #4647C7; }
+		  
+/* this section styles all visited links in the main class on the web page */
+.main a:visited {color: #9050C7;}
+
+/* this section styles all images on the web page */
+img {float: right; 
+	 border: 3px solid #C75AB7;
+	 margin: 20px; }
+	 			  
+/* this section styles the footer of the web page */
+footer {text-align: center; }
+
+/* this section styles the links within the footer of the web page */
+footer a { color: #C7B463; 
+		   font-size: 20px; 
+		   text-decoration: none;
+		   font-weight: bold; 
+		   padding: 25px; }
+		   
+/* this section styles the visited links within the footer of the web page */
+footer a:visited { color: #5EC73C; }

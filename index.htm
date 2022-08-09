@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Crossly Creative</title>
+<meta name="description" content="Welcome to Crossly Creative, where we introduce beginners to cross-stitching">
+<link rel="stylesheet" href="style.css"/>
+<script src="js/modernizr.custom.05819.js"></script>
+</head>
+<body>
+<header>
+<h1>Crossly Creative</h1>
+</header>
+<nav>
+<a href="index.htm">Home</a>
+<a href="materials.htm">Materials</a>
+<a href="stitches.htm">Stitches</a>
+<a href="patterns.htm">Patterns</a>
+</nav>
+<div class = "main">
+<h2>Welcome</h2>
+<p>Hello and welcome to Crossly Creative. In this website, we introduce beginners to cross-stitching. 
+You will learn how to do the basic stitches, what materials you will need to get started, where to 
+find free patterns, and more.</p>
+<p>I started cross-stitching in my early teens, which gives me about twenty years of experience now. 
+I&#39;ve worked on images ranging from small quotes with flowery borders to a wizard measuring almost 
+two feet high, and I&#39;ve enjoyed it immensely. I find that the repetitive motion of cross-stitching 
+relaxes me (right up until I get my threads tangled).</p>
+<p>My biggest piece of advice to beginners is to just have fun. While you might start out with a pattern, 
+there is always an element of choice involved. If you don&#39;t like the colors used in a pattern but you 
+like the image, use different colors. If you like one element in a big pattern but not the rest of it, 
+cross-stitch that one element. If you like a border but not the quote within it, find a new quote. Be creative 
+and don&#39;t be afraid to make something your own.</p>   
+</div>
+<br>
+<div>
+<form id = "experienceChecker">
+	<fieldset>
+		<label>Have You Ever Cross-Stitched Before?</label><br>
+		<input type="radio" name="experience" id="yes" value="yes"> Yes<br>
+		<input type="radio" name="experience" id="no" value="no"> No<br>
+		<button type="button" id="experienceButton">Submit</button>
+		<p id="experienceMessage">&nbsp;</p>
+	</fieldset>
+</form>
+<script>
+	var formValidity = true;
+	//this function chooses which message to display dependong on whether or not the viewer has ever cross stitched before
+	function displayMessage() {
+		var positiveAnswer = document.getElementById("yes").value;
+		var negativeAnswer = document.getElementById("no").value;
+		if (document.getElementById("yes").checked === true) {
+		document.getElementById("experienceMessage").innerHTML = "There's always more to learn. Explore on!";
+		} else if (document.getElementById("no").checked === true) {
+			document.getElementById("experienceMessage").innerHTML = "You've come to the right place. Explore on!"; }		
+	}
+	
+	//this function creates the event listeners
+	function createEventListeners() {
+	var submitButton = document.getElementById("experienceButton");
+	if (submitButton.addEventListener) {
+		submitButton.addEventListener("click", displayMessage, false); }
+	else if (submitButton.attachEvent) {
+		submitButton.attachEvent("onclick", submitForm); }
+	}
+	//this function sets up the page	
+	function setUpPage() {
+		createEventListeners();
+		displayDate();
+	}
+	
+	if (window.addEventListener) {
+		window.addEventListener("load", setUpPage, false);
+	} else if (window.attachEvent) {
+		window.attachEvent("onload", setUpPage);
+	}
+</script>
+</div>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+</footer>
+</body>
+</html>
